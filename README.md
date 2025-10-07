@@ -72,6 +72,7 @@ Your AI pet should appear and begin interacting!
 
 
 ⚙️ File Overview
+
 project_root/
 
 ├── __pycache__/                # Compiled Python cache
