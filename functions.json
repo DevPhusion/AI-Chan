@@ -1,0 +1,26 @@
+{
+    "Functions": [
+        {
+            "name": "get_file_query",
+            "description": "Get all the contents in the file_query dictionary and return it. If the user request a file opening, always try calling open_file after this function is called"
+        },
+        {
+            "name": "open_file",
+            "description": "Open a file / program with the given path using its default configurations. Always try calling get_file_query first before calling this function. Return a boolean representing whether the file opening was successful or not",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string",
+                        "description": "The path to the file, or program to open. The path can be a direct path to a file, or a key for the file_query dictionary. The keys of the dictionary can be get through the get_file_query function."
+                    }
+                },
+                "required": ["path"]
+            }   
+        },
+        {
+            "name": "exit",
+            "description": "Shut down the model"
+        }
+    ]  
+} 

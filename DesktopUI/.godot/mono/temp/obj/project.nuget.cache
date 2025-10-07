@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "a+62vaLU+aY=",
+  "success": true,
+  "projectFilePath": "D:\\Programming\\AI\\AI-Chan\\DesktopUI\\Toon_Shader.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\godot.sourcegenerators\\4.4.0\\godot.sourcegenerators.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\godotsharp\\4.4.0\\godotsharp.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\godotsharpeditor\\4.4.0\\godotsharpeditor.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
