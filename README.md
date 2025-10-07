@@ -73,12 +73,19 @@ Your AI pet should appear and begin interacting!
 
 ⚙️ File Overview
 project_root/
+
 ├── __pycache__/                # Compiled Python cache
+
 ├── .venv/                      # Virtual environment
+
 ├── DesktopUI/                  # Godot UI project files
+
 ├── GPT-SoVITS/                 # GPT-SoVITS setup and models
+
 ├── functions.json              # Configuration or function mapping for AI behavior
+
 ├── main.py                     # Main Python entry point
+
 ├── ref_audio.wav               # Reference Audio                
 
 🧩 Customization Tips
