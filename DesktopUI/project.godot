@@ -13,20 +13,25 @@ config_version=5
 config/name="Toon_Shader"
 run/main_scene="res://Scenes/World.tscn"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 0)
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=648
+window/size/viewport_height=1152
 window/size/resizable=false
+window/size/borderless=true
 window/size/always_on_top=true
 window/size/transparent=true
-window/size/no_focus=true
 window/per_pixel_transparency/allowed=true
 
 [dotnet]
 
 project/assembly_name="Toon_Shader"
-project/solution_directory="D:\\Programming\\Godot\\Godot_StarRail_Shader_Demo"
 
 [rendering]
 

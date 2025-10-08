@@ -105,7 +105,6 @@ You are a helpful AI assistant
 """
 
 REF_AUDIO_PATH = "D:/Programming/AI/AI-Chan/VO_Furina_When_It_Rains.wav"
-OUT_AUDIO_PATH = "D:/Programming/AI/AI-Chan/output.wav"
 TTS_SERVER_URL = "http://127.0.0.1:9880/tts"
 
 proc = None
@@ -359,8 +358,4 @@ atexit.register(cleanup)
 chat = client.chats.create(model=MODEL, config = config)
 tool_chat = tool_client.chats.create(model=MODEL, config= tool_config)
 
-#start_conversation(chat=chat, role="Phusion", tool_chat=tool_chat)
-
-# Example usage
-generate_voicelines("Hello, my name is Rui. I am an AI.")
-generate_voicelines("Limits vary depending on the specific model being used, and some limits only apply to specific models. For example, Images per minute, or IPM, is only calculated for models capable of generating images (Imagen 3), but is conceptually similar to TPM. Other models might have a token per day limit (TPD).")
+start_conversation(chat=chat, role="Phusion", tool_chat=tool_chat)

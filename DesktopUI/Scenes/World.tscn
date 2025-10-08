@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnk7b4wef5sdp"]
+[gd_scene load_steps=9 format=3 uid="uid://cnk7b4wef5sdp"]
 
 [ext_resource type="Shader" uid="uid://dia7hixas6bo1" path="res://Scripts/Shaders/sobelHighlight.gdshader" id="1_2dftf"]
+[ext_resource type="Script" uid="uid://bsm515r5x2xvh" path="res://Scripts/World.cs" id="1_5nsto"]
 [ext_resource type="PackedScene" uid="uid://dwby1misfoegk" path="res://Scenes/rui.tscn" id="2_j0p05"]
+[ext_resource type="PackedScene" uid="uid://cs3pgmu320080" path="res://Scenes/InterfaceManager.tscn" id="4_gjpho"]
 
 [sub_resource type="Environment" id="Environment_ctgmk"]
 ambient_light_source = 1
-ambient_light_color = Color(1, 1, 1, 0)
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ayuu8"]
 
@@ -19,10 +20,8 @@ shader_parameter/thickness = 0.0
 flip_faces = true
 size = Vector2(2, 2)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_om45m"]
-size = Vector2(5, 5)
-
 [node name="World" type="Node3D"]
+script = ExtResource("1_5nsto")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ctgmk")
@@ -35,11 +34,11 @@ shadow_enabled = true
 directional_shadow_max_distance = 16.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49374, 0.854956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0505761, 0.874789, 0.854956)
 projection = 1
 current = true
-fov = 64.8
-size = 0.553824
+fov = 37.8493
+size = 1.71724
 
 [node name="HighLight" type="MeshInstance3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000393569, -0.128741, 0.00153422)
@@ -49,14 +48,14 @@ extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_mssda")
 skeleton = NodePath("../..")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(2.18695, 0, 0, 0, 2.70816, 0, 0, 0, 1, 0, 0, 0)
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62174, 0.187082, 0.267281)
 light_color = Color(0.804688, 1, 0, 1)
 shadow_enabled = true
 
-[node name="plainMesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.53383, 0)
-visible = false
-mesh = SubResource("PlaneMesh_om45m")
-
 [node name="Rui" parent="." instance=ExtResource("2_j0p05")]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_gjpho")]

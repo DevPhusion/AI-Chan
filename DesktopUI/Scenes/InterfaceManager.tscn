@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs3pgmu320080"]
+
+[ext_resource type="Script" uid="uid://clw1ea8j8adlg" path="res://Scripts/Menu.cs" id="1_wuesy"]
+[ext_resource type="Script" uid="uid://bjx1wl4aw67bs" path="res://Scripts/InterfaceManager.cs" id="1_xaeyd"]
+
+[node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("Menu")]
+script = ExtResource("1_xaeyd")
+Menu = NodePath("Menu")
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wuesy")
+
+[connection signal="gui_input" from="Menu" to="Menu" method="OnGuiInput"]

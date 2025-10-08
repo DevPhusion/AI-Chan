@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Toon_Shader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8aba2748a256d5c594676c434dcbce3399fcce3c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Toon_Shader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Toon_Shader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
